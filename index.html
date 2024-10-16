@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observability Tool - Line Chart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Observability Tool - User Activity Chart</h1>
+    <div>
+        <label for="endpointFilter">Filter by Endpoint:</label>
+        <select id="endpointFilter">
+            <option value="all">All Endpoints</option>
+            <option value="special">Special Endpoints</option>
+        </select>
+        
+        <label for="dateRange">Select Date Range:</label>
+        <input type="date" id="startDate"> to
+        <input type="date" id="endDate">
+        <button onclick="applyFilters()">Apply Filters</button>
+    </div>
+    <canvas id="lineChart" width="800" height="400"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <script src="script.js"></script>
+</body>
+</html>
